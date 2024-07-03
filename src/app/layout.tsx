@@ -13,7 +13,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={"font-ubuntu-regular"}>{children}</body>
+      <body className="font-ubuntu-regular" 
+        // suppressHydrationWarning={true}
+      >
+        {children}
+      </body>
     </html>
   );
 }
