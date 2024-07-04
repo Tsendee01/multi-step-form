@@ -1,10 +1,13 @@
 "use client"
 
-import useLocalStorage from "@/hooks/useLocalStroge";
-import { useEffect, useState } from "react";
+import { useMultiStepFormContext } from "@/contexts/MultiStepFormContext";
 
 export const NextStepButton = () => {
+    const { step } = useMultiStepFormContext();
+
+    if(step === 5) return <div></div>
+
     return (
-        <button onClick={() => console.log("asdasd")} className="bg-marine-blue text-magnolia text-sm py-2 px-4 rounded hover:opacity-[90%]">Next Step</button>
+        <button type="submit" form={`step-${step}`} className={`text-magnolia text-sm py-2 px-4 rounded hover:opacity-[90%] ${step === 4 ? "bg-purplish-blue" : "bg-marine-blue"}`}>{step === 4 ? "Confirm" : "Next Step"}</button>
     );
 }

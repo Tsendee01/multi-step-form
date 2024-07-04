@@ -8,7 +8,6 @@ import Step5 from "./Step5";
 
 export const Steps = () => {
     const { step } = useMultiStepFormContext();
-    console.log("aaaaa", step)
     return (
       <>
         {step === 1 && <Step1 />}
@@ -18,4 +17,4 @@ export const Steps = () => {
         {step === 5 && <Step5 />}
       </>
     );
-  };
+};

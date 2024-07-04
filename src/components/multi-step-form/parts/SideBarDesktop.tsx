@@ -8,7 +8,7 @@ import { useMultiStepFormContext } from "@/contexts/MultiStepFormContext";
 export const SideBarDesktop = () => {
     const { step } = useMultiStepFormContext();
     return (
-        <div className="relative w-1/3 flex justify-start items-start pt-8 pl-8">
+        <div className="hidden md:flex relative w-1/3 justify-start items-start pt-8 pl-8">
             <Image
               src="/assets/images/bg-sidebar-desktop.svg"
               layout="fill"

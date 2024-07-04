@@ -10,7 +10,7 @@ export const SideBarMobile = () => {
   const { step } = useMultiStepFormContext();
   
     return (
-        <div className="w-full relative pb-52">
+        <div className="w-full relative pb-52 md:hidden">
           <Image
             src="/assets/images/bg-sidebar-mobile.svg"
             layout="fill"

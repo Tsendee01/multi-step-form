@@ -1,9 +1,8 @@
 "use client"
 import Image from "next/image";
-export const PlanCard = ({ card, option }: { card: any, option: "monthly" | "yearly" }) => {
-    console.log("card", card)
+export const PlanCard = ({ card, option, setPlan, plan }: { card: any, option: "monthly" | "yearly", setPlan: (plan: number) => void, plan: number }) => {
     return (
-        <div className="border rounded-xl border-cool-gray p-4 flex-1 hover:border-purplish-blue cursor-pointer">
+        <div className={`border rounded-xl border-cool-gray p-4 flex-1 hover:border-purplish-blue cursor-pointer ${plan === card.id && "bg-magnolia border-purplish-blue"}`} onClick={() => setPlan(card.id)}>
             <div className="flex gap-4 md:flex-col md:gap-12">
                 <div>
                     <Image
